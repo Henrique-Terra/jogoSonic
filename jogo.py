@@ -38,7 +38,7 @@ def jogar():
     sonicX = 500
     sonicY = 400
     movimentosonicX = 0
-    largurasonic = 120
+    largurasonic = 110
     alturasonic = 40
     alturamoeda = 40
     larguramoeda = 60
