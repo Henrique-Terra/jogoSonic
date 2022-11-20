@@ -79,7 +79,7 @@ def jogar():
             gameDisplay.blit(sonic, (sonicX,sonicY))
             
             gameDisplay.blit(moeda, (posicaomoedaX,posicaomoedaY))
-            escreverTexto("Pontos: "+str(pontos))
+            escreverTexto("Pontos: " + str(pontos))
 
             pixelsXsonic = list(range(sonicX, sonicX+largurasonic))
             pixelsYsonic = list(range(sonicY, sonicY+alturasonic))

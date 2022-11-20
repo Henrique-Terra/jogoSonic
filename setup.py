@@ -1,14 +1,6 @@
-import cx_Freeze
+from cx_Freeze import setup, Executable
 
-executables = [cx_Freeze.Executable(
-    script="jogo.py",
-    icon="assets/sonicIcon.ico"
-)]
-cx_Freeze.setup(
-    name="Sonic",
-    options={
-        "build_exe":{"packages":["pygame"],
-        "include_files":["assets"]
-        }}
-    ,executables = executables
-)
+setup(name = "Jogo Sonic" ,
+	version = "1.0" ,
+	description = "Esse foi um projeto criado pelos alunos Henrique Tres Terra e Vinicius Artuso da instituição ATITUS, Passo Fundo" ,
+	executables = [Executable("jogo.py")])
