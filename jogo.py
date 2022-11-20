@@ -28,7 +28,7 @@ def morreu():
     fonte  = pygame.font.Font("freesansbold.ttf",95)
     fonte2  = pygame.font.Font("freesansbold.ttf",45)
     textoDisplay = fonte.render("PERDEU !!!!",True,branco)
-    textoDisplay2 = fonte2.render("press enter to continue !!!!",True,branco)
+    textoDisplay2 = fonte2.render("Press enter to continue !!!!",True,branco)
     gameDisplay.blit(textoDisplay, (150,150))
     gameDisplay.blit(textoDisplay2, (150,350))
     pygameDisplay.update()
