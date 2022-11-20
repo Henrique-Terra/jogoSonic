@@ -3,7 +3,7 @@ import random
 import time
 pygame.init()
 pygameDisplay = pygame.display
-pygameDisplay.set_caption("Sonic")
+pygameDisplay.set_caption("Jogo Do Sonic")
 altura = 520
 largura = 1000
 tamanho = (largura, altura)
