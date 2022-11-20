@@ -12,7 +12,7 @@ clock = pygame.time.Clock()
 gameEvents = pygame.event
 branco = (255,255,255)
 fundo = pygame.image.load("assets/fundoSonic.png")
-sonic = pygame.image.load("assets/sonic.png")
+sonic = pygame.image.load("assets/sonic.jpg")
 moeda = pygame.image.load("assets/moedaSonic.png")
 
 
@@ -102,7 +102,7 @@ def jogar():
                     morreu()
                     jogando=False
                     pygame.mixer.music.stop()
-                    pygame.mixer.Sound.play(explosaoSound)
+                    
 
 
         pygameDisplay.update()
