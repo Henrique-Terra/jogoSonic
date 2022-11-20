@@ -25,34 +25,27 @@ def escreverTexto (texto):
     pygameDisplay.update()
 
 def morreu():
-    fonte  = pygame.font.Font("freesansbold.ttf",95)
+    fonte  = pygame.font.Font("freesansbold.ttf",80)
     fonte2  = pygame.font.Font("freesansbold.ttf",45)
     textoDisplay = fonte.render("PERDEU !!!!",True,branco)
-    textoDisplay2 = fonte2.render("Press enter to continue !!!!",True,branco)
+    textoDisplay2 = fonte2.render("Aperte Enter Para Continuar !!!!",True,branco)
     gameDisplay.blit(textoDisplay, (150,150))
     gameDisplay.blit(textoDisplay2, (150,350))
     pygameDisplay.update()
 
 def jogar():
     jogando = True
-    sonicX = 500
+    sonicX = 400
     sonicY = 400
     movimentosonicX = 0
-    largurasonic = 120
-    alturasonic = 110
-    alturamoeda = 250
-    larguramoeda = 50
+    largurasonic = 75
+    alturasonic = 50
+    alturamoeda = 50
+    larguramoeda = 60
     posicaomoedaX = 400
     posicaomoedaY = -240
-    velocidademoeda = 1
+    velocidademoeda = 3
     pontos = 0
-    pygame.mixer.music.load("assets/somJogo.mp3")
-    pygame.mixer.music.play(-1)
-    pygame.mixer.music.set_volume(-1)
-
-    moedaSound = pygame.mixer.Sound("assets/sonicMoeda.mp3")
-    moedaSound.set_volume(1)
-    pygame.mixer.Sound.play(moedaSound)
 
     while True:
         for event in gameEvents.get():
@@ -75,7 +68,7 @@ def jogar():
                 posicaomoedaX = random.randint(0,largura)
                 velocidademoeda = velocidademoeda + 1
                 pontos = pontos + 1
-                pygame.mixer.Sound.play(moedaSound)
+            
             else:
                 posicaomoedaY =posicaomoedaY + velocidademoeda
 
@@ -98,11 +91,9 @@ def jogar():
             if colisaoY > 0:
                 colisaoX = len(list(set(pixelXmoeda) & set(pixelsXsonic) ))
                 print(colisaoX)
-                if colisaoX > 45:
+                if colisaoX > 20:
                     morreu()
                     jogando=False
-                    pygame.mixer.music.stop()
-                    
 
 
         pygameDisplay.update()
