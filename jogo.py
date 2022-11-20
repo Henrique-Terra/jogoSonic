@@ -35,12 +35,12 @@ def morreu():
 
 def jogar():
     jogando = True
-    sonicX = 400
+    sonicX = 500
     sonicY = 400
     movimentosonicX = 0
-    largurasonic = 75
-    alturasonic = 50
-    alturamoeda = 50
+    largurasonic = 120
+    alturasonic = 40
+    alturamoeda = 40
     larguramoeda = 60
     posicaomoedaX = 400
     posicaomoedaY = -240
